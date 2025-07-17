@@ -256,7 +256,7 @@ header.autoshow.scrollOn {
 }
 
 header.autoshow.scrollOff {
-  opacity: ;
+  opacity:0 ;
   top: -120px;
 }
 
@@ -15673,3 +15673,13 @@ img {
   }
 }
 
+img.img-fluid.hover-scale-1-2{
+    object-fit: cover;
+    width: 100%;
+    height: 265px;
+}
+video.img-fluid.hover-scale-1-2{
+    object-fit: cover;
+    width: 100%;
+    height: 265px;
+}
