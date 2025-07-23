@@ -24,6 +24,12 @@
    <meta name="msapplication-square70x70logo" content="favicons/msapplication-tiny.png" />
    <meta name="msapplication-square150x150logo" content="favicons/msapplication-square.png" />
 
+     <!-- Lenis -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.37/bundled/lenis.min.js"></script>
+   <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
 
 </head>
 
@@ -225,7 +231,7 @@
 
                                 <div class="absolute bottom-0 w-100 p-4 d-flex text-white justify-content-between">
                                     <div class="d-tag-s2">Curated Thrift & Designer Fashion</div>
-                                    <div class="fw-bold">2024</div>
+                                    
                                 </div>
                               </a>
                             </div>
@@ -239,7 +245,7 @@
 
                                 <div class="absolute bottom-0 w-100 p-4 d-flex text-white justify-content-between">
                                     <div class="d-tag-s2">AI-Powered Energy Optimizer</div>
-                                    <div class="fw-bold">2023</div>
+                                    
                                 </div>
                               </a>
                             </div>
@@ -253,7 +259,7 @@
 
                                 <div class="absolute bottom-0 w-100 p-4 d-flex text-white justify-content-between">
                                     <div class="d-tag-s2">Business Intelligence & Insights</div>
-                                    <div class="fw-bold">2022</div>
+                                    
                                 </div>
                               </a>
                             </div>
@@ -312,12 +318,38 @@
         <!-- footer close -->
     </div>
 
-
     <!-- Javascript Files
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
     <script src="js/custom-marquee.js"></script>
+
+   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (typeof Lenis === "undefined") {
+        console.error("❌ Lenis not loaded.");
+        return;
+      }
+
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smooth: true,
+      });
+
+      // Sync Lenis with GSAP's ScrollTrigger
+      lenis.on('scroll', ScrollTrigger.update);
+
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+      });
+
+      gsap.ticker.lagSmoothing(0);
+
+      console.log("✅ Lenis is working");
+    });
+  </script>
+
 
 </body>
 </html>

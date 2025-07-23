@@ -3922,6 +3922,8 @@ span.teaser {
 .text-light h5,
 .text-light h6 {
   color: #fff;
+  text-shadow: 2px 2px 5px #000000;
+  font-weight: bold;
 }
 
 .de_light .text-light h1,
