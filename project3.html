@@ -8,6 +8,8 @@
     <meta content="" name="description" >
     <meta content="" name="keywords" >
     <meta content="" name="author" >
+    <meta name="msapplication-square70x70logo" content="favicons/msapplication-tiny.png" />
+    <meta name="msapplication-square150x150logo" content="favicons/msapplication-square.png" />
     <!-- CSS Files
     ================================================== -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
@@ -21,9 +23,9 @@
    <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png" sizes="67x67" />
    <link rel="apple-touch-icon" href="favicons/apple-touch-icon-72x72.png" sizes="72x72" />
    <link rel="apple-touch-icon" href="favicons/apple-touch-icon-114x114.png" sizes="114x114" />
-   <meta name="msapplication-square70x70logo" content="favicons/msapplication-tiny.png" />
-   <meta name="msapplication-square150x150logo" content="favicons/msapplication-square.png" />
 
+    <!-- Lenis -->
+      <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.8/dist/lenis.css">
 </head>
 
 <body class="dark-scheme">
@@ -183,6 +185,20 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
+  <script src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
 
+  <script>
+    const lenis = new Lenis()
+
+    lenis.on('scroll', ScrollTrigger.update)
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000)
+    })
+
+    gsap.ticker.lagSmoothing(0)
+  </script>
 </body>
 </html>

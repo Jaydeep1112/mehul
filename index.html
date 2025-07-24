@@ -8,6 +8,8 @@
     <meta content="" name="description" >
     <meta content="" name="keywords" >
     <meta content="" name="author" >
+    <meta name="msapplication-square70x70logo" content="favicons/msapplication-tiny.png" />
+    <meta name="msapplication-square150x150logo" content="favicons/msapplication-square.png" />
     <!-- CSS Files
     ================================================== -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
@@ -21,14 +23,13 @@
    <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png" sizes="67x67" />
    <link rel="apple-touch-icon" href="favicons/apple-touch-icon-72x72.png" sizes="72x72" />
    <link rel="apple-touch-icon" href="favicons/apple-touch-icon-114x114.png" sizes="114x114" />
-   <meta name="msapplication-square70x70logo" content="favicons/msapplication-tiny.png" />
-   <meta name="msapplication-square150x150logo" content="favicons/msapplication-square.png" />
+   
 
      <!-- Lenis -->
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.37/bundled/lenis.min.js"></script>
+      <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.8/dist/lenis.css">
+  
    <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
 
 
 </head>
@@ -317,31 +318,20 @@
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
     <script src="js/custom-marquee.js"></script>
+  <script src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
 
-   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      if (typeof Lenis === "undefined") {
-        console.error("❌ Lenis not loaded.");
-        return;
-      }
+  <script>
+    const lenis = new Lenis()
 
-      const lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        smooth: true,
-      });
+    lenis.on('scroll', ScrollTrigger.update)
 
-      // Sync Lenis with GSAP's ScrollTrigger
-      lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000)
+    })
 
-      gsap.ticker.add((time) => {
-        lenis.raf(time * 1000);
-      });
-
-      gsap.ticker.lagSmoothing(0);
-
-      console.log("✅ Lenis is working");
-    });
+    gsap.ticker.lagSmoothing(0)
   </script>
 
 
