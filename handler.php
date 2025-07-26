@@ -20,7 +20,7 @@ $validator->field('Message')->maxLength(6000);
 
 
 $pp->requireReCaptcha();
-$pp->getReCaptcha()->initSecretKey('insert your secret key here');
+$pp->getReCaptcha()->initSecretKey('6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe');
 
 
 $pp->sendEmailTo('designesia@gmail.com'); // ← Your email here
