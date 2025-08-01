@@ -8893,7 +8893,7 @@ i.bg-color-secondary {
 }
 
 .de-marquee-list .d-item-txt {
-  font-size:120px;
+  font-size:100px;
   line-height:120px;
   font-style: normal;
   font-weight: bold;
@@ -9774,7 +9774,7 @@ i.bg-color-secondary {
 .fs-60{font-size: 60px;}
 .fs-64{font-size: 64px;}
 .fs-72{font-size: 72px;}
-.fs-84{font-size: 84px;}
+.fs-84{font-size: 65px;}
 .fs-96{font-size: 96px;}
 .fs-120{font-size: 120px;}
 .fs-150{font-size: 150px;}
@@ -15687,5 +15687,9 @@ video.img-fluid.hover-scale-1-2{
 }
 
 .text-fit{
-  letter-spacing: 1px;
+    text-transform: capitalize;
+    margin-top: -.1em;
+    letter-spacing: -0.2vw;
+    line-height: 1em;
+    font-weight: 800;
 }
