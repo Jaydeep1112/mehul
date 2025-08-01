@@ -1715,50 +1715,51 @@
          // --- fit text -----
          const $elem = $(".text-fit");
          const maxWidthPerc = 100;
-         const maxHeightPerc = 85;
+         const maxHeightPerc = 75;
          const group = null
          const tAlign = "center";
          const fontFamily = "";
          const autoResize = true;
+        
          new FitToParent($elem, maxWidthPerc, maxHeightPerc, group, tAlign, fontFamily, autoResize);
          
          // -- shuffle text -----
-         var velocity = 40;         
-         var shuffleElement = $('.shuffle,.d-menu-1 li a,.btn-main,.btn-line');
-         $.each( shuffleElement, function(index, item) {
-            $(item).attr('data-text', $(item).text());
-         });
-         var shuffle = function(o) {
-            for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-            return o;
-         };
-         var shuffleText = function(element, originalText) {
-            var elementTextArray = [];
-            var randomText = [];
-            for (var i=0;i<originalText.length;i++) {
-                elementTextArray.push(originalText.charAt([i]));
-            };
-            var repeatShuffle = function(times, index) {
-                if ( index == times ) {
-                    element.text(originalText);
-                    return;
-                } 
-                setTimeout( function() {
-                    randomText = shuffle(elementTextArray);
-                    for (var i=0;i<index;i++) {
-                        randomText[i] = originalText[i];    
-                    }
-                    randomText = randomText.join('');
-                    element.text(randomText);
-                    index++;
-                    repeatShuffle(times, index);
-                }, velocity);   
-            }
-            repeatShuffle(element.text().length, 0);
-         }
-         shuffleElement.mouseenter(function() {
-            shuffleText($(this), $(this).data('text'));
-         });
+        //  var velocity = 40;         
+        //  var shuffleElement = $('.shuffle,.d-menu-1 li a,.btn-main,.btn-line');
+        //  $.each( shuffleElement, function(index, item) {
+        //     $(item).attr('data-text', $(item).text());
+        //  });
+        //  var shuffle = function(o) {
+        //     for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+        //     return o;
+        //  };
+        //  var shuffleText = function(element, originalText) {
+        //     var elementTextArray = [];
+        //     var randomText = [];
+        //     for (var i=0;i<originalText.length;i++) {
+        //         elementTextArray.push(originalText.charAt([i]));
+        //     };
+        //     var repeatShuffle = function(times, index) {
+        //         if ( index == times ) {
+        //             element.text(originalText);
+        //             return;
+        //         } 
+        //         setTimeout( function() {
+        //             randomText = shuffle(elementTextArray);
+        //             for (var i=0;i<index;i++) {
+        //                 randomText[i] = originalText[i];    
+        //             }
+        //             randomText = randomText.join('');
+        //             element.text(randomText);
+        //             index++;
+        //             repeatShuffle(times, index);
+        //         }, velocity);   
+        //     }
+        //     repeatShuffle(element.text().length, 0);
+        //  }
+        //  shuffleElement.mouseenter(function() {
+        //     shuffleText($(this), $(this).data('text'));
+        //  });
 
          // --------------------------------------------------
          // navigation for mobile

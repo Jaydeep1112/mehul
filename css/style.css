@@ -15685,3 +15685,7 @@ video.img-fluid.hover-scale-1-2{
     width: 100%;
     height: 265px;
 }
+
+.text-fit{
+  letter-spacing: 1px;
+}
