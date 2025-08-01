@@ -8893,7 +8893,7 @@ i.bg-color-secondary {
 }
 
 .de-marquee-list .d-item-txt {
-  font-size:100px;
+  font-size:80px;
   line-height:120px;
   font-style: normal;
   font-weight: bold;
@@ -15687,7 +15687,6 @@ video.img-fluid.hover-scale-1-2{
 }
 
 .text-fit{
-    text-transform: capitalize;
     margin-top: -.1em;
     letter-spacing: -0.2vw;
     line-height: 1em;
