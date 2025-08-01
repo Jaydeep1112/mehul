@@ -15687,5 +15687,8 @@ video.img-fluid.hover-scale-1-2{
 }
 
 .text-fit{
-  letter-spacing: 1px;
+  margin-top: -1rem;
+  line-height: 1rem;
+  font-weight: 800;
+  letter-spacing:-0.2px;
 }
