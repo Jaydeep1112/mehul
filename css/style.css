@@ -15689,6 +15689,20 @@ video.img-fluid.hover-scale-1-2{
     width: 100%;
     height: 265px;
 }
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper .video-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 .text-fit{
     margin-top: -.1em;
