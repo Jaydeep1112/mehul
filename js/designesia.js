@@ -2012,5 +2012,30 @@
         });
         grid_gallery();
     });
+
+    $(document).ready(function() {
+    // Image popup
+    $('.image-popup').magnificPopup({
+        type: 'image'
+    });
+
+    // Video popup using mfp-iframe class
+    $('.mfp-iframe').magnificPopup({
+        type: 'iframe',
+        iframe: {
+            patterns: {
+                vimeo: {
+                    index: 'vimeo.com/',
+                    id: function(url) {
+                        var m = url.match(/(https?:\/\/)?(www\.)?(player\.)?vimeo\.com\/([a-z]*\/)*([0-9]{6,11})[?]?.*/);
+                        if (!m || !m[5]) return null;
+                        return m[5];
+                    },
+                    src: 'https://player.vimeo.com/video/%id%?autoplay=1'
+                }
+            }
+        }
+    });
+});
     
  })(jQuery);
