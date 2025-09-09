@@ -1715,7 +1715,7 @@
          // --- fit text -----
          const $elem = $(".text-fit");
          const maxWidthPerc = 100;
-         const maxHeightPerc = 70;
+         const maxHeightPerc = 80;
          const group = null
          const tAlign = "center";
          const fontFamily = "";

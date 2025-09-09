@@ -15783,3 +15783,21 @@ video.img-fluid.hover-scale-1-2{
   display: block;
   object-fit: cover;
 }
+.semi-text{
+  text-transform: none;
+}
+.text-fit-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: space-between;         
+  padding: 10px;         
+}
+
+.text-fit {
+  margin: 0;               
+}
+
+.d-menu-1 {
+  margin: 0;        
+}
