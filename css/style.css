@@ -3316,10 +3316,10 @@ footer.footer-light h5 {
 
 h1,
 .h1 {
-  font-size: 64px;
+  font-size: 60px;
   margin-bottom: 20px;
   line-height: 1.1em;
-  letter-spacing: -2.5px;
+  letter-spacing: -0.25px;
 }
 
 h1 .label {
@@ -3481,7 +3481,7 @@ h2 {
   font-size: 48px;
   margin-bottom: 20px;
   line-height: 1.1em;
-  letter-spacing: -1.25px;
+  letter-spacing: -0.25px;
   padding-bottom: 5px;
 }
 
@@ -15769,4 +15769,17 @@ video.img-fluid.hover-scale-1-2{
     .d-menu-1 ul li {
         margin: 10px 0;
     }
+}
+.fullwidth-image {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  overflow: hidden; 
+}
+
+.fullwidth-image img {
+  width: 100%;
+  height: auto; 
+  display: block;
+  object-fit: cover;
 }
