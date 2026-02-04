@@ -15805,3 +15805,19 @@ video.img-fluid.hover-scale-1-2{
 font-size: 25px;
 text-decoration: underline;
 }
+.theme-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  background: transparent;
+  color: #ffffff;
+  border: 1.5px solid #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+  background: #ffffff;
+  color: #000000;
+}
